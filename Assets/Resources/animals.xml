@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Animals>
+    <Animal name="Capsule">
+        <Foods>
+            <Food name="Grass">
+            </Food>
+            <Food name="Meat">
+            </Food>
+            <Food name="Apple">
+            </Food>
+            <Food name="Banana">
+            </Food>
+        <CorrectFood>0</CorrectFood>
+        </Foods>
+    </Animal>
+    <Animal name="Cube">
+        <Foods>
+            <Food name="Grass">
+            </Food>
+            <Food name="Meat">
+            </Food>
+            <Food name="Apple">
+            </Food>
+            <Food name="Banana">
+            </Food>
+        <CorrectFood>1</CorrectFood>
+        </Foods>
+    </Animal>
+    <Animal name="Cylinder">
+        <Foods>
+            <Food name="Grass">
+            </Food>
+            <Food name="Meat">
+            </Food>
+            <Food name="Apple">
+            </Food>
+            <Food name="Banana">
+            </Food>
+        <CorrectFood>2</CorrectFood>
+        </Foods>
+    </Animal>
+    <Animal name="Sphere">
+        <Foods>
+            <Food name="Grass">
+            </Food>
+            <Food name="Meat">
+            </Food>
+            <Food name="Apple">
+            </Food>
+            <Food name="Banana">
+            </Food>
+            <CorrectFood>3</CorrectFood>
+        </Foods>
+    </Animal>
+</Animals>

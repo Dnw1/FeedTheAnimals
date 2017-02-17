@@ -1,0 +1,146 @@
+
+skeleton.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Back_Back_Leg
+  rotate: true
+  xy: 1417, 202
+  size: 262, 207
+  orig: 262, 207
+  offset: 0, 0
+  index: -1
+Back_Back_Leg_Feet
+  rotate: true
+  xy: 1899, 1875
+  size: 172, 146
+  orig: 172, 146
+  offset: 0, 0
+  index: -1
+Back_Front_Leg
+  rotate: false
+  xy: 1664, 0
+  size: 217, 219
+  orig: 217, 219
+  offset: 0, 0
+  index: -1
+Back_Front_Leg_Feet
+  rotate: true
+  xy: 1899, 1609
+  size: 159, 115
+  orig: 159, 115
+  offset: 0, 0
+  index: -1
+Left_Front_Leg
+  rotate: false
+  xy: 461, 50
+  size: 324, 404
+  orig: 324, 404
+  offset: 0, 0
+  index: -1
+Left_Front_Leg_Front
+  rotate: false
+  xy: 1417, 30
+  size: 247, 172
+  orig: 247, 172
+  offset: 0, 0
+  index: -1
+Right_Frong_Leg
+  rotate: false
+  xy: 785, 72
+  size: 293, 382
+  orig: 294, 383
+  offset: 1, 0
+  index: -1
+Right_Front_Leg_Feet
+  rotate: true
+  xy: 1624, 219
+  size: 245, 221
+  orig: 245, 221
+  offset: 0, 0
+  index: -1
+dwarf
+  rotate: true
+  xy: 1474, 464
+  size: 182, 474
+  orig: 182, 474
+  offset: 0, 0
+  index: -1
+eye
+  rotate: false
+  xy: 1881, 307
+  size: 163, 157
+  orig: 163, 157
+  offset: 0, 0
+  index: -1
+eyes_closed
+  rotate: false
+  xy: 1899, 1768
+  size: 135, 107
+  orig: 135, 107
+  offset: 0, 0
+  index: -1
+head_base_default
+  rotate: false
+  xy: 1078, 96
+  size: 339, 358
+  orig: 339, 358
+  offset: 0, 0
+  index: -1
+head_base_eat
+  rotate: false
+  xy: 1135, 464
+  size: 339, 358
+  orig: 339, 358
+  offset: 0, 0
+  index: -1
+house
+  rotate: false
+  xy: 0, 923
+  size: 1255, 1124
+  orig: 1255, 1124
+  offset: 0, 0
+  index: -1
+iris
+  rotate: true
+  xy: 2014, 1741
+  size: 27, 32
+  orig: 27, 32
+  offset: 0, 0
+  index: -1
+neck
+  rotate: false
+  xy: 0, 49
+  size: 461, 405
+  orig: 461, 405
+  offset: 0, 0
+  index: -1
+ropes
+  rotate: true
+  xy: 1474, 646
+  size: 176, 496
+  orig: 176, 496
+  offset: 0, 0
+  index: -1
+shell
+  rotate: true
+  xy: 1255, 822
+  size: 1225, 644
+  orig: 1225, 644
+  offset: 0, 0
+  index: -1
+tail
+  rotate: true
+  xy: 1881, 77
+  size: 230, 162
+  orig: 230, 162
+  offset: 0, 0
+  index: -1
+underbelly_shell
+  rotate: false
+  xy: 0, 454
+  size: 1135, 469
+  orig: 1135, 469
+  offset: 0, 0
+  index: -1

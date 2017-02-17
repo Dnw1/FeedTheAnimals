@@ -45,17 +45,76 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\DotNetZipLicense.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Plugins\dependencies.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Readme_upgrading.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\Readme.txt" />
-     <None Include="Assets\Plugins\Pixelplacement\iTween\ReadMe!\ReadMe!.txt" />
-     <None Include="Assets\Plugins\AstarPathfindingProject\link.xml" />
+     <Compile Include="Assets\spine-unity\Asset Types\Editor\AtlasAssetInspector.cs" />
+     <Compile Include="Assets\spine-unity\Asset Types\Editor\SkeletonDataAssetInspector.cs" />
+     <Compile Include="Assets\spine-unity\Editor\AssetDatabaseAvailabilityDetector.cs" />
+     <Compile Include="Assets\spine-unity\Editor\BoneFollowerInspector.cs" />
+     <Compile Include="Assets\spine-unity\Editor\Menus.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SkeletonAnimationInspector.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SkeletonAnimatorInspector.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SkeletonBaker.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SkeletonRendererInspector.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SpineAttributeDrawers.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SpineEditorUtilities.cs" />
+     <Compile Include="Assets\spine-unity\Editor\SpineInspectorUtility.cs" />
+     <Compile Include="Assets\spine-unity\Modules\BoundingBoxFollower\Editor\BoundingBoxFollowerInspector.cs" />
+     <Compile Include="Assets\spine-unity\Modules\CustomMaterials\Editor\SkeletonRendererCustomMaterialsInspector.cs" />
+     <Compile Include="Assets\spine-unity\Modules\Ragdoll\Editor\SkeletonRagdoll2DInspector.cs" />
+     <Compile Include="Assets\spine-unity\Modules\Ragdoll\Editor\SkeletonRagdollInspector.cs" />
+     <Compile Include="Assets\spine-unity\Modules\Shaders\Sprite\Editor\SpineSpriteShaderGUI.cs" />
+     <Compile Include="Assets\spine-unity\Modules\SkeletonGraphic\Editor\SkeletonGraphicInspector.cs" />
+     <Compile Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\Editor\SkeletonPartsRendererInspector.cs" />
+     <Compile Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\Editor\SkeletonRenderSeparatorInspector.cs" />
+     <Compile Include="Assets\spine-unity\SkeletonUtility\Editor\SkeletonUtilityBoneInspector.cs" />
+     <Compile Include="Assets\spine-unity\SkeletonUtility\Editor\SkeletonUtilityInspector.cs" />
+     <None Include="Assets\spine-unity\Editor\Resources\SpineAssetDatabaseMarker.txt" />
+     <None Include="Assets\Examples\Spine\Eyes\eyes.atlas.txt" />
+     <None Include="Assets\spine-unity\Shaders\HiddenPass.shader" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteVertexLighting.cginc" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteShadows.cginc" />
+     <None Include="Assets\Art\SPINE\Mouse_House\Mamma_Mouse\skeleton.atlas.txt" />
+     <None Include="Assets\Art\SPINE\Mouse_House\Pappa_Mouse\Final\skeleton.atlas.txt" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpritePixelLighting.cginc" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteLighting.cginc" />
+     <None Include="Assets\Examples\Spine\Gauge\Gauge.atlas.txt" />
+     <None Include="Assets\Art\SPINE\Hedgehog\skeleton.atlas.txt" />
+     <None Include="Assets\Examples\Spine\FootSoldier\FS_White.atlas.txt" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\ShaderShared.cginc" />
+     <None Include="Assets\spine-unity\Modules\CustomMaterials\SkeletonRendererCustomMaterials.txt" />
+     <None Include="Assets\Examples\Spine\Hero\hero-mesh.atlas.txt" />
+     <None Include="Assets\Examples\Spine\Dragon\license.txt" />
+     <None Include="Assets\Art\Graphics\Ranger\skeleton.atlas.txt" />
+     <None Include="Assets\Examples\Spine\Hero\license.txt" />
+     <None Include="Assets\Examples\Spine\Goblins\goblins.atlas.txt" />
+     <None Include="Assets\Art\SPINE\Owl\skeleton.atlas.txt" />
+     <None Include="Assets\Examples\Spine\Strechyman\stretchyman-diffuse-pma.atlas.txt" />
+     <None Include="Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
+     <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteUnlit.cginc" />
+     <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
+     <None Include="Assets\spine-unity\version.txt" />
+     <None Include="Assets\Art\SPINE\Turtle\Final\skeleton.atlas.txt" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpritesPixelLit.shader" />
+     <None Include="Assets\Examples\Spine\Raggedy Spineboy\Raggedy Spineboy.atlas.txt" />
+     <None Include="Assets\spine-unity\Modules\Shaders\SkeletonTint.shader" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpritesUnlit.shader" />
+     <None Include="Assets\Art\SPINE\Mouse_House\Daughter_Mouse\skeleton.atlas.txt" />
+     <None Include="Assets\spine-unity\Shaders\Bones.shader" />
+     <None Include="Assets\Art\SPINE\Mouse_House\Son_Mouse\skeleton.atlas.txt" />
+     <None Include="Assets\Resources\animals.xml" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpritesVertexLit.shader" />
+     <None Include="Assets\spine-unity\Modules\Ghost\Shaders\SkeletonGhost.shader" />
+     <None Include="Assets\Art\SPINE\Dwarf\Final\skeleton.atlas.txt" />
+     <None Include="Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
+     <None Include="Assets\Resources\textlines.xml" />
+     <None Include="Assets\spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
+     <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />
+     <None Include="Assets\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
+     <None Include="Assets\Art\SPINE\Rabbit\skeleton.atlas.txt" />
+     <None Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
+     <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteDepthNormalsTexture.shader" />
+     <None Include="Assets\spine-unity\Shaders\SkeletonLit.shader" />
+     <None Include="Assets\Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
  </Reference>
@@ -80,9 +139,6 @@
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
- <Reference Include="Pathfinding.Ionic.Zip.Reduced">
- <HintPath>C:/Users/Dylan/Documents/GitHub/FeedTheAnimals/Assets/Plugins/AstarPathfindingProject/Plugins/DotNetZip/Pathfinding.Ionic.Zip.Reduced.dll</HintPath>
- </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
@@ -91,8 +147,8 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{00BF8092-1177-912A-3E37-5B73AE175B27}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{CC5ACC7F-DA11-1458-0505-B583437AC04F}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
