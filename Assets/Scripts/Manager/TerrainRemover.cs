@@ -1,8 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class TerrainRemover : MonoBehaviour {
-
+public class TerrainRemover : MonoBehaviour
+{
     private GameObject platformDestructionPoint;
 
     void Start()

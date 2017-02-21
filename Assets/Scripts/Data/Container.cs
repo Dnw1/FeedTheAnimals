@@ -3,21 +3,34 @@ using UnityEngine;
 using System.Collections;
 
 public class Container : MonoBehaviour
-{
+{/*
+    public static string Bear;
+    public static string Rabbit;
+    public static string Wolf;
+    public static string Fox;
+    public static string Squirrel;
+    public static string Pidgeon;
+    public static string Crow;
+    public static string Mole;
+    public static string Dear;
+    public static string Tortoise;
+    public static string Hedgehog;
+    public static string Eagle;*/
 
-    void Animal()
+    public void AddString()
     {
-        string AElement0 = "Capsule";
-        string AElement1 = "Cube";
-        string AElement2 = "Cylinder";
-        string AElement3 = "Sphere";
+        if (Check.GName == "Land")
+        {
+
+        }
+        if (Check.GName == "Air")
+        {
+
+        }
+        if (Check.GName == "Water")
+        {
+
+        }
     }
 
-    void Food()
-    {
-        string FElement0 = "Apple";
-        string FElement1 = "Banana";
-        string FElement2 = "Grass";
-        string FElement3 = "Meat";
-    }
 }

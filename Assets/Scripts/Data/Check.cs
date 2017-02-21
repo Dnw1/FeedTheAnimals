@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System;
 
 public class Check : MonoBehaviour
 {
@@ -10,15 +9,14 @@ public class Check : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D coll)
     {
-        //Debug.Log("Fire?");
         if (coll.gameObject.tag == "Check")
         {
-            //Debug.Log("Problem is in layer");
+            //Debug.Log(coll.gameObject.layer)
             if (coll.gameObject.layer == 9)
             {
+                //Debug.Log("coll layer");
                 GName = "Land";
-                Hold = "groundLand(Clone)";
-                //Debug.Log("He Got inside LayerCheck");
+                Hold = "Grass_Layer4LandSpawn(Clone)";
             }
             if (coll.gameObject.layer == 4)
             {
@@ -32,10 +30,10 @@ public class Check : MonoBehaviour
             }
             if (GName == "Land" || GName == "Water" || GName == "Air")
             {
+                //Debug.Log("He got in the type check");
                 LName = Hold;
-                //Debug.Log("He sends message to Hold");
+                //Debug.Log(Hold);
                 GameObject.Find(Hold).BroadcastMessage("ListenForMessage", SendMessageOptions.DontRequireReceiver);
-                Debug.Log(Hold);
             }
         }
     }

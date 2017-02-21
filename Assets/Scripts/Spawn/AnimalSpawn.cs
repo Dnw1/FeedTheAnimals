@@ -1,7 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Net.NetworkInformation;
-using JetBrains.Annotations;
 
 public class AnimalSpawn : MonoBehaviour
 {
@@ -17,11 +15,6 @@ public class AnimalSpawn : MonoBehaviour
     public static int TypeAnimal;
     private string CamHolder = "Main Camera";
 
-    /*
-    private int FirstTaken;
-    private int SecondTaken;
-    private int ThirdTaken;
-    */
 
     public void ListenForMessage()
     {
@@ -33,16 +26,15 @@ public class AnimalSpawn : MonoBehaviour
         if (gameObject.tag.Contains("Animal"))
         {
             CheckType();
-                _randAnimal = Random.Range(0, SpawnedArray.Length); //Picks random animal from Animals.
+            _randAnimal = Random.Range(0, SpawnedArray.Length); //Picks random animal from Animals.
 
-                Vector3 spawnPosition = new Vector3(Random.Range(-AValues.x, -AValues.y), 1,
-                    Random.Range(AValues.x, AValues.y)); //The location of where the animal will spawn.
+            Vector3 spawnPosition = new Vector3(Random.Range(-AValues.x, -AValues.y), 1, Random.Range(AValues.x, AValues.y)); //The location of where the animal will spawn.
 
-                Instantiate(SpawnedArray[_randAnimal], spawnPosition + transform.TransformPoint(0, 0, 0),
-                    gameObject.transform.rotation); //Spawning the animal.
-                TypeAnimal = _randAnimal;
-                //Debug.Log(TypeAnimal);
-                GameObject.Find(CamHolder).BroadcastMessage("StopCamera", SendMessageOptions.DontRequireReceiver);
+            Instantiate(SpawnedArray[_randAnimal], spawnPosition + transform.TransformPoint(0, 0, 0), gameObject.transform.rotation); //Spawning the animal.
+            TypeAnimal = _randAnimal;
+            //Debug.Log(TypeAnimal);
+            GameObject.Find(CamHolder).BroadcastMessage("StopCamera", SendMessageOptions.DontRequireReceiver);
+            //GameObject.Find(Check.LName).BroadcastMessage("", SendMessageOptions.DontRequireReceiver);
         }
      }
 

@@ -1,13 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
 
-public class PlatformGenerator : MonoBehaviour {
-
-    [SerializeField] private GameObject thePlatform;
+public class PlatformGenerator : MonoBehaviour
+{
+    [SerializeField] private GameObject Parent;
     [SerializeField] private Transform generationPoint;
     [SerializeField] private float distanceBetween;
+    [SerializeField] private GameObject[] Objects;
 
     private float platformWidth;
     private Vector3 ThisVector;
@@ -15,8 +14,7 @@ public class PlatformGenerator : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        platformWidth = thePlatform.GetComponent<BoxCollider2D>().size.x;
-
+        StartCoroutine(GoShuffle());
     }
 
     // Update is called once per frame
@@ -29,10 +27,32 @@ public class PlatformGenerator : MonoBehaviour {
     {
         if (ThisVector.x < generationPoint.position.x)
         {
-            ThisVector.y = ThisVector.y + 4f;
-            ThisVector.z = ThisVector.z + 1f;
-            ThisVector = new Vector3(ThisVector.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
-            Instantiate(thePlatform, ThisVector, transform.rotation);
+            foreach (GameObject Objs in Objects)
+                {
+                    ThisVector.y = ThisVector.y + 4f;
+                    ThisVector.z = ThisVector.z + 1f;
+                    ThisVector = new Vector3(ThisVector.x + platformWidth + distanceBetween, transform.position.y, transform.position.z);
+                    (Instantiate(Objs, ThisVector, transform.rotation) as GameObject).transform.parent = Parent.transform;
+                }
         }
+    }
+
+    private void reshuffle()
+    {
+        // Knuth shuffle algorithm
+        for (int t = 0; t < Objects.Length; t++)
+        {
+            GameObject tmp = Objects[t];
+            int r = Random.Range(t, Objects.Length);
+            Objects[t] = Objects[r];
+            Objects[r] = tmp;
+        }
+    }
+
+    IEnumerator GoShuffle()
+    {
+        yield return new WaitForSeconds(10);
+        reshuffle();
+        StartCoroutine(GoShuffle());
     }
 }

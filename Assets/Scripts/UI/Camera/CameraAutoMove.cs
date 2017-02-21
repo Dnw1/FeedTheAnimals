@@ -3,7 +3,6 @@ using System.Collections;
 
 public class CameraAutoMove : MonoBehaviour
 {
-
     private GameObject camM;
 
     // Use this for initialization
