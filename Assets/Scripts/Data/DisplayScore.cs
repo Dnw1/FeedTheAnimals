@@ -4,42 +4,33 @@ using System.Collections;
 
 public class DisplayScore : MonoBehaviour
 {
-    private int Highscore;
-    private int CurrentScore;
+    private int Highscore; //Highscore you have ingame.
+    private int CurrentScore; //Your current score for right answers.
 
-    [SerializeField] private Text _score;
-    [SerializeField] private Text _highScore;
+    [SerializeField] private Text _score; //Holds the text for the current score.
+    [SerializeField] private Text _highScore; //Holds the text for the highscore.
 
     void Start()
     {
-        Highscore = Score.CurrentHighScore;
-        CurrentScore = 0;
+        Highscore = Score.CurrentHighScore; //Set highscore to saved highscore.
+        CurrentScore = 0; //Set current score to 0.
     }
-
+    
     void Update()
     {
-        Highscore = Score.CurrentHighScore;
-        //if (_score.name == "Score")
-        //{
-        //_score.GU
-        _score.text = "Score: " + CurrentScore;
-        //}
-       // if (_highScore.name == "HighScore")
-       // {
-            _highScore.text = "HighScore: " + Highscore;
-       // }
-        GameEnded();
-        if (Input.GetMouseButtonDown(0))
-        {
-            CurrentScore += 1;
-        }
+        Highscore = Score.CurrentHighScore; //Update highscore incase current score get's above previous highscore.
+
+        _score.text = "Score: " + CurrentScore; //Show ingame current score.
+        _highScore.text = "HighScore: " + Highscore; //Show ingame the highscore.
+
+        GameEnded(); //If the game has ended save the current highscore. Need to make it a gameobject.find probably or something less hardcoded.
     }
 
     void GameEnded()
     {
-        if (CurrentScore > Highscore)
+        if (CurrentScore > Highscore) //If the currentscore is higher than the highscore ingame.
         {
-            Score.GetScore = CurrentScore;
+            Score.GetScore = CurrentScore; //Set the highscore of other script to current score and save it
         }
     }
 }

@@ -12,28 +12,28 @@ public class Score : MonoBehaviour
 
     void Start()
     {
-        PlayerPrefs.GetInt("highscore");
-        oldHighScore = PlayerPrefs.GetInt("highscore");
-        CurrentHighScore = oldHighScore;
+        PlayerPrefs.GetInt("highscore"); //Get saved highscore if any.
+        oldHighScore = PlayerPrefs.GetInt("highscore"); //Set oldHighScore to the found highscore.
+        CurrentHighScore = oldHighScore; //Make the CurrentHighScore ingame same as oldHighScore.
     }
 
     void Update()
     {
-        StoreHighscore();
+        StoreHighscore(); //Keep checking till game ends.
     }
 
     void StoreHighscore()
     {
-        newHighScore = GetScore;
-        if (newHighScore > oldHighScore)
+        newHighScore = GetScore; //Get ingame score and set newHighScore to it.
+        if (newHighScore > oldHighScore) //Compare the 2.
         {
             PlayerPrefs.SetInt("highscore", newHighScore);
-            PlayerPrefs.Save();
+            PlayerPrefs.Save(); //If it is higher save it as the new highscore.
         }
-        if (newHighScore < oldHighScore)
+        if (newHighScore < oldHighScore) //Compare the 2.
         {
             PlayerPrefs.SetInt("highscore", oldHighScore);
-            PlayerPrefs.Save();
+            PlayerPrefs.Save(); //If it is lower save the old highscore again.
         }
     }
 }

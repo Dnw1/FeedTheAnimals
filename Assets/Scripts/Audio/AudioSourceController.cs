@@ -5,36 +5,32 @@ using System.Linq;
 public class AudioSourceController : MonoBehaviour
 {
     [SerializeField]
-    private List<AudioClip> audioList = new List<AudioClip>();
+    private List<AudioClip> audioList = new List<AudioClip>(); //Hold list of audioclips.
     [SerializeField]
-    private float audioVolume;
+    private float audioVolume; //Hold audio float.
     [SerializeField]
-    private bool autoStopSound;
+    private bool autoStopSound; //Hold Check to stop sound.
 
-    private AudioSource audioSource;
-    private int lastIndexPlayed;
-    private int audioReRolls = 3;
+    private AudioSource audioSource; //Hold single audiosource.
+    private int lastIndexPlayed; //Hold of last index.
+    private int audioReRolls = 3; //Hold int for rerolls.
 
-    public bool isPlaying = false;
+    public bool isPlaying = false; //Bool to check for playing.
     // Use this for initialization
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.volume = audioVolume;
-        if (audioList.Count != 0)
+        audioSource = GetComponent<AudioSource>(); //Get component for audiosource.
+        audioSource.volume = audioVolume; //the volume of source is audiovolume.
+        if (audioList.Count != 0) //Check if list is empty.
         {
             lastIndexPlayed = Random.Range(0, audioList.Count);
-        }
+        } //
         else
         {
             print("there is nothing in the audioList");
         }
     }
 
-    /// <summary>
-    /// Uses a for loop to find the right sound.
-    /// </summary>
-    /// <param name="name">Name of the song.</param>
     public void ChangeAudioSourceByName(string name)
     {
         for (int i = 0; i < audioList.Count; i++)
@@ -45,7 +41,7 @@ public class AudioSourceController : MonoBehaviour
             {
                 PlayAudioClip(i);
                 return;
-            }
+            } //Uses a for loop to find the right sound.
         }
 
         print(name + " is not a valid sound");
@@ -71,11 +67,11 @@ public class AudioSourceController : MonoBehaviour
         if (audioList.Count != 0)
         {
             while (randomIndex == lastIndexPlayed && ReRolls <= 0)
-            {//check if last sound played is the same
-                randomIndex = Random.Range(0, audioList.Count);          //reroll index
-                ReRolls--;                                              //for the small chance it rerolls the same audio file forever
+            { //Check if last sound played is the same.
+                randomIndex = Random.Range(0, audioList.Count); //Reroll index.
+                ReRolls--; //For the small chance it rerolls the same audio file forever.
             }
-            lastIndexPlayed = randomIndex;                           // sets new lastPlayedIndex
+            lastIndexPlayed = randomIndex; //Sets new lastPlayedIndex.
             PlayAudioClip(randomIndex);
         }
         else
@@ -94,9 +90,9 @@ public class AudioSourceController : MonoBehaviour
     {
         if (autoStopSound)
         {
-            StopAudio();    //stop sound here
+            StopAudio(); //Stop sound here.
         }
-        audioSource.clip = audioList[indexGiven];                //change sound here
-        audioSource.Play();                                     //play sound here
+        audioSource.clip = audioList[indexGiven]; //Change sound here.
+        audioSource.Play(); //Play sound here.
     }
 }

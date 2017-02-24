@@ -1,62 +1,109 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class FoodSpawner : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] Foods; //Store food prefabs for location.
-    private int _randFood;
-    public static int TypeFood;
-    private int PickedFood;
-    private int Count = 3;
-    
-    private int Number1;
-    private int Number2;
-    private int Number3;
+    [SerializeField] private Sprite[] Foods; //Store food prefabs for location.
 
-    // Use this for initialization
-    void Start () {
-	    FoodSpawn();
-	}
+    private Sprite Food1;
+    private Sprite Food2;
+    private Sprite Food3;
 
-    private void FoodSpawn()
+    public static Sprite _food1;
+    public static Sprite _food2;
+    public static Sprite _food3;
+    //Hold individual Food choices.
+
+    [SerializeField] private Button[] Buttons; //Store buttons in the game to shuffle and assign.
+
+    public static Button Button1;
+    public static Button Button2;
+    public static Button Button3;
+
+    private String FoodOne; //Assign right food from picker script.
+
+    private Vector2 SpawnSpot; //Hold spawn location.
+
+    public void FoodSpawn()
     {
-        if (gameObject.tag.Contains("Food"))
+        if (gameObject.tag.Contains("Food")) //Check to make sure script is on right object.
         {
-            _randFood = Random.Range(1, Foods.Length); //Picks random food from Foods. Make first in list duplicate because checks.
-            if (Number1 != _randFood || Number2 != _randFood || Number3 != _randFood)
+            BShuffle(); //Shuffle the buttons around.
+            FoodOne = Picker.FoodForAnimal; //Get right food.
+            for (int i = 0; i < Foods.Length; i++)
             {
-                Vector3 spawnPosition = gameObject.transform.position; //The location of where the food will spawn.
+                if (Foods[i].name == FoodOne)
+                {
+                    Food1 = Foods[i];
+                    //Debug.Log(Food1);
+                } //Go through Foods array to look for right food.
+            }
 
-                GameObject PickedFood = Instantiate(Foods[_randFood], spawnPosition, Quaternion.identity) as GameObject;
-                //Spawning the food.
-                PickedFood.transform.parent = GameObject.Find("Canvas").transform;
-                if (Number1 == 0)
+            Food2 = Foods[0];
+            if (Food2 == Food1)
+            {
+                Food2 = Foods[1];
+            }
+
+            FShuffle();
+            Food3 = Foods[0];
+
+            if (Food3 == Food1 || Food3 == Food2)
+            {
+                Food3 = Foods[1];
+                if (Food3 == Food1 || Food3 == Food2)
                 {
-                    Number1 = _randFood;
-                }else if (Number2 == 0)
-                {
-                    Number2 = _randFood;
-                }else if (Number3 == 0)
-                {
-                    Number3 = _randFood;
+                    Food3 = Foods[2];
                 }
+            } //Get shuffled foods for the other 2 and make sure their not the same.
 
-                //Debug.Log(_randFood);
-                int TypeFood = _randFood;
-                //PickedFood = Foods[_randFood];
+            Buttons[0].image.overrideSprite = Food1;
+            Buttons[1].image.overrideSprite = Food2;
+            Buttons[2].image.overrideSprite = Food3;
+            //Assign the food sprites picked to buttons.
+            SetPublicInfo();
+
+            BShuffle(); //Shuffle the buttons again.
+
+            if (Food1 != null)
+            {
+                GameObject.Find("TestClicked").BroadcastMessage("SetParamiters", SendMessageOptions.DontRequireReceiver);
             }
         }
      }
-}
-    /*
-    public void ShuffleArray<T>(T[] Foods)
+    private void BShuffle()
     {
-        for (int i = Foods.Length - 1; i > 0; i--)
+        // Knuth shuffle algorithm
+        for (int t = 0; t < Buttons.Length; t++)
         {
-            _randFood = Random.Range(0, i);
-            T tmp = Foods[i];
-            Foods[i] = Foods[_randFood];
-            Foods[_randFood] = tmp;
+            Button tmp = Buttons[t];
+            int r = UnityEngine.Random.Range(t, Buttons.Length);
+            Buttons[t] = Buttons[r];
+            Buttons[r] = tmp;
         }
-    }*/
+    } //Button shuffler.
+
+    private void FShuffle()
+    {
+        for (int s = 0; s < Foods.Length; s++)
+        {
+            Sprite rmp = Foods[s];
+            int e = UnityEngine.Random.Range(s, Foods.Length);
+            Foods[s] = Foods[e];
+            Foods[e] = rmp;
+        }
+    } //Food shuffler
+
+    private void SetPublicInfo()
+    {
+        _food1 = Food1;
+        _food2 = Food2;
+        _food3 = Food3;
+
+        Button1 = Buttons[0];
+        Button2 = Buttons[1];
+        Button3 = Buttons[2];
+    }
+}

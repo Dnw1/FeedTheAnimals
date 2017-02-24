@@ -85,12 +85,14 @@
      <None Include="Assets\Examples\Spine\Dragon\license.txt" />
      <None Include="Assets\Art\Graphics\Ranger\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Hero\license.txt" />
+     <None Include="Assets\Art\RANGER LUKE\Graphics\SPINE\Animals\Rabbit\Export\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Goblins\goblins.atlas.txt" />
      <None Include="Assets\Art\SPINE\Owl\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Strechyman\stretchyman-diffuse-pma.atlas.txt" />
      <None Include="Assets\Examples\Spine\Raptor\raptor.atlas.txt" />
      <None Include="Assets\Examples\Spine\Spineboy\spineboy.atlas.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteUnlit.cginc" />
+     <None Include="Assets\Art\RANGER LUKE\Graphics\SPINE\Animals\Fox\Export\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\license.txt" />
      <None Include="Assets\spine-unity\version.txt" />
      <None Include="Assets\Art\SPINE\Turtle\Final\skeleton.atlas.txt" />
@@ -105,8 +107,11 @@
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpritesVertexLit.shader" />
      <None Include="Assets\spine-unity\Modules\Ghost\Shaders\SkeletonGhost.shader" />
      <None Include="Assets\Art\SPINE\Dwarf\Final\skeleton.atlas.txt" />
+     <None Include="Assets\Art\RANGER LUKE\Graphics\SPINE\Animals\Bear\export\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\Dragon\dragon.atlas.txt" />
      <None Include="Assets\Resources\textlines.xml" />
+     <None Include="Assets\Art\RANGER LUKE\Graphics\SPINE\Animals\Wolf\export\skeleton.atlas.txt" />
+     <None Include="Assets\Art\RANGER LUKE\Graphics\Ranger\skeleton.atlas.txt" />
      <None Include="Assets\spine-unity\Modules\SkeletonGraphic\Shaders\SkeletonGraphic.shader" />
      <None Include="Assets\spine-unity\Shaders\Skeleton.shader" />
      <None Include="Assets\Examples\Spine\Spineunitygirl\Doi.atlas.txt" />
@@ -114,6 +119,7 @@
      <None Include="Assets\spine-unity\Modules\SkeletonRenderSeparator\SkeletonRenderSeparator.txt" />
      <None Include="Assets\spine-unity\Modules\Shaders\Sprite\SpriteDepthNormalsTexture.shader" />
      <None Include="Assets\spine-unity\Shaders\SkeletonLit.shader" />
+     <None Include="Assets\Art\RANGER LUKE\Graphics\SPINE\Ranger\Final\skeleton.atlas.txt" />
      <None Include="Assets\Examples\Spine\FootSoldier\Equipment\Equipment.atlas.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

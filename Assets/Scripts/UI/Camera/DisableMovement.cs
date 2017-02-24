@@ -4,14 +4,13 @@ using System.Collections;
 public class DisableMovement : MonoBehaviour
 {
 
-    private CameraAutoMove ScriptSet;
-    private string CamName = "Main Camera";
+    private CameraAutoMove ScriptSet; //Hold Script that auto moves camera.
+    private string CamName = "Main Camera"; //Hold string of Main Camera.
 
     public void StopCamera()
     {
-        Debug.Log("ASpawn Found it");
-        ScriptSet = GetComponent<CameraAutoMove>();
-        ScriptSet.enabled = false;
-        GameObject.Find(CamName).BroadcastMessage("ZoomCamera", SendMessageOptions.DontRequireReceiver);
+        ScriptSet = GetComponent<CameraAutoMove>(); //Get the component for the script.
+        ScriptSet.enabled = false; //Set script enabled to false to stop it.
+        GameObject.Find(CamName).BroadcastMessage("ZoomCamera", SendMessageOptions.DontRequireReceiver); //Send message for camera to start zooming in.
     }
 }
